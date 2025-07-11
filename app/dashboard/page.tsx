@@ -10,7 +10,7 @@ const Dashboard = () => {
   const [username, setUsername] = useState<string>("");
 
   useEffect(() => {
-    // Evita execução do lado do servidor
+
     if (typeof window !== "undefined") {
       if (!isAuthenticated()) {
         push("/");
