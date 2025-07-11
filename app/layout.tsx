@@ -1,7 +1,7 @@
 // app/layout.tsx
 import "./globals.css";
 import Script from "next/script";
-import ThemeToggle from "@/components/ThemeToggle"; // <-- certifique-se que o caminho está correto
+import ThemeToggle from "@/components/ThemeToggle"; 
 
 export const metadata = {
   title: "Capivara AI",
@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="pt-BR" suppressHydrationWarning>
       <head />
       <body>
-        {/* Aplica o tema baseado no localStorage assim que a página carrega */}
+        {/* tema  */}
         <Script
           id="theme-loader"
           strategy="beforeInteractive"
@@ -35,7 +35,7 @@ export default function RootLayout({
           }}
         />
 
-        {/* Conteúdo da página */}
+        {/* Conteúdo */}
         {children}
 
         {/* ThemeToggle fixado no canto inferior direito */}
