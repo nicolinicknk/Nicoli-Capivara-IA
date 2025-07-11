@@ -54,12 +54,14 @@ const Input = ({
         disabled={disabled}
         title={title}
         className={`w-full px-4 py-3 pr-10 rounded-md border outline-none transition-all
+          text-black dark:text-white
           ${state === "error" ? "border-red-500" : "border-gray-300 dark:border-gray-600"}
           ${disabled ? "bg-gray-100 dark:bg-gray-700 cursor-not-allowed" : "bg-white dark:bg-gray-800"}
           ${className}
         `}
       />
-  {isPasswordField && (
+
+      {isPasswordField && (
         <span
           onClick={() => setShowPassword((prev) => !prev)}
           className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-gray-500"
@@ -71,7 +73,6 @@ const Input = ({
           )}
         </span>
       )}
-
     </div>
   );
 };
