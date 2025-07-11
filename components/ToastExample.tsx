@@ -2,7 +2,7 @@
 import React, { createContext, useContext, useState } from "react";
 import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from "lucide-react";
 
-// Tipos para o sistema de toast
+// Tipos 
 export type ToastType = "success" | "error" | "warning" | "info";
 
 export interface Toast {
@@ -12,7 +12,7 @@ export interface Toast {
   duration?: number;
 }
 
-// Contexto para gerenciar toasts
+//Gerenciar toasts
 interface ToastContextType {
   toasts: Toast[];
   addToast: (toast: Omit<Toast, "id">) => void;
@@ -21,7 +21,7 @@ interface ToastContextType {
 
 const ToastContext = createContext<ToastContextType | undefined>(undefined);
 
-// Hook para usar o contexto
+
 export const useToast = () => {
   const context = useContext(ToastContext);
   if (!context) {
@@ -90,7 +90,7 @@ export const ToastContainer: React.FC = () => {
   );
 };
 
-// Provider do contexto
+
 export const ToastProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
@@ -112,38 +112,3 @@ export const ToastProvider: React.FC<{ children: React.ReactNode }> = ({
     </ToastContext.Provider>
   );
 };
-
-// Exemplo de uso:
-/*
-// No layout.tsx ou _app.tsx
-import { ToastProvider } from '@/components/ToastExample';
-
-export default function Layout({ children }) {
-  return (
-    <ToastProvider>
-      {children}
-    </ToastProvider>
-  );
-}
-
-// Em qualquer componente
-import { useToast } from '@/components/ToastExample';
-
-export default function MyComponent() {
-  const { addToast } = useToast();
-
-  const handleSuccess = () => {
-    addToast({
-      type: 'success',
-      message: 'Operação realizada com sucesso!',
-      duration: 3000
-    });
-  };
-
-  return (
-    <button onClick={handleSuccess}>
-      Mostrar Toast
-    </button>
-  );
-}
-*/
