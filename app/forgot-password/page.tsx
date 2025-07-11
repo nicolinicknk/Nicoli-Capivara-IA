@@ -18,8 +18,6 @@ const ForgotPassword = () => {
       setError("Digite um email válido.");
       return;
     }
-
-    // Simulação de envio (substituir por chamada real em backend)
     setSubmitted(true);
   };
 
