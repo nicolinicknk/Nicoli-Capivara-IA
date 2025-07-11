@@ -8,11 +8,21 @@ export interface SubmitButtonProps {
   disabled?: boolean;
 }
 
-const SubmitButton: FC<SubmitButtonProps> = ({ children, className = "", disabled = false }) => (
+const SubmitButton: FC<SubmitButtonProps> = ({
+  children,
+  className = "",
+  disabled = false,
+}) => (
   <button
     type="submit"
-    className={`btn-primary w-full ${className}`}
     disabled={disabled}
+    className={`
+      w-full px-4 py-3 rounded-md font-semibold text-black dark:text-white
+      bg-primary-purple hover:bg-secondary-purple
+      transition-all duration-300 ease-in-out
+      disabled:opacity-50 disabled:cursor-not-allowed
+      ${className}
+    `}
   >
     {children}
   </button>
