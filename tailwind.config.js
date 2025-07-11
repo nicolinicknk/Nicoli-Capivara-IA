@@ -1,6 +1,6 @@
-/** @type {import('tailwindcss').Config} */
+/** import tailwindcss */
 module.exports = {
-  darkMode: 'class', // ← ESSENCIAL para usar dark mode com localStorage
+  darkMode: 'class', 
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
