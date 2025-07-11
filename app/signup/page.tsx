@@ -128,82 +128,83 @@ const Signup = () => {
         onSubmit={handleSubmit}
         className="bg-white dark:bg-gray-800 shadow-lg rounded-xl p-8 w-full max-w-md space-y-4 animate-fade-in relative"
       >
-        <h1 className="text-center font-bold text-[28px] md:text-[32px]">
-          Cadastre-se na{" "}
-          <span className="gradient-text from-secondary-purple to-primary-purple">
-            Capivara AI
-          </span>
-        </h1>
+      <h1 className="text-center font-bold text-[28px] md:text-[32px] text-black dark:text-white">
+  Cadastre-se na{" "}
+  <span className="gradient-text from-secondary-purple to-primary-purple">
+    Capivara AI 
+  </span>
+</h1>
 
-        <label htmlFor="username-input" className="block mt-8 mb-2 font-medium text-base">
-          Usuário
-        </label>
-        <Input
-          id="username-input"
-          type="text"
-          placeholder="Digite seu usuário"
-          value={username}
-          onChange={(e) => {
-            setUsername(e.target.value);
-            setError("");
-          }}
-          state={shakeUsername ? "error" : "default"}
-          disabled={loading}
-          className={shakeUsername ? "animate-shake" : ""}
-        />
+<label htmlFor="username-input" className="block mt-8 mb-2 font-medium text-base text-black dark:text-white">
+  Usuário
+</label>
+<Input
+  id="username-input"
+  type="text"
+  placeholder="Digite seu usuário"
+  value={username}
+  onChange={(e) => {
+    setUsername(e.target.value);
+    setError("");
+  }}
+  state={shakeUsername ? "error" : "default"}
+  disabled={loading}
+  className={shakeUsername ? "animate-shake" : ""}
+/>
 
-        <label htmlFor="email-input" className="block mt-8 mb-2 font-medium text-base">
-          Email
-        </label>
-        <Input
-          id="email-input"
-          type="email"
-          placeholder="Digite seu email"
-          value={email}
-          onChange={(e) => {
-            setEmail(e.target.value);
-            setError("");
-          }}
-          state={shakeEmail ? "error" : "default"}
-          disabled={loading}
-          className={shakeEmail ? "animate-shake" : ""}
-        />
+<label htmlFor="email-input" className="block mt-8 mb-2 font-medium text-base text-black dark:text-white">
+  Email
+</label>
+<Input
+  id="email-input"
+  type="email"
+  placeholder="Digite seu email"
+  value={email}
+  onChange={(e) => {
+    setEmail(e.target.value);
+    setError("");
+  }}
+  state={shakeEmail ? "error" : "default"}
+  disabled={loading}
+  className={shakeEmail ? "animate-shake" : ""}
+/>
 
-        <label htmlFor="password-input" className="block mt-8 mb-2 font-medium text-base">
-          Senha
-        </label>
-        <Input
-          id="password-input"
-          type="password"
-          placeholder="Digite sua senha"
-          value={password}
-          onChange={(e) => {
-            setPassword(e.target.value);
-            setError("");
-          }}
-          state={shakePassword ? "error" : "default"}
-          disabled={loading}
-          className={shakePassword ? "animate-shake" : ""}
-        />
+<label htmlFor="password-input" className="block mt-8 mb-2 font-medium text-base text-black dark:text-white">
+  Senha
+</label>
+<Input
+  id="password-input"
+  type="password"
+  placeholder="Digite sua senha"
+  value={password}
+  onChange={(e) => {
+    setPassword(e.target.value);
+    setError("");
+  }}
+  state={shakePassword ? "error" : "default"}
+  disabled={loading}
+  className={shakePassword ? "animate-shake" : ""}
+/>
 
-        <PasswordStrength password={password} />
+<PasswordStrength password={password} />
 
-        <label htmlFor="confirm-password-input" className="block mt-8 mb-2 font-medium text-base">
-          Confirme a Senha
-        </label>
-        <Input
-          id="confirm-password-input"
-          type="password"
-          placeholder="Confirme sua senha"
-          value={confirmPassword}
-          onChange={(e) => {
-            setConfirmPassword(e.target.value);
-            setError("");
-          }}
-          state={shakeConfirmPassword ? "error" : "default"}
-          disabled={loading}
-          className={shakeConfirmPassword ? "animate-shake" : ""}
-        />
+<label htmlFor="confirm-password-input" className="block mt-8 mb-2 font-medium text-base text-black dark:text-white">
+  Confirme a Senha
+</label>
+<Input
+  id="confirm-password-input"
+  type="password"
+  placeholder="Confirme sua senha"
+  value={confirmPassword}
+  onChange={(e) => {
+    setConfirmPassword(e.target.value);
+    setError("");
+  }}
+  state={shakeConfirmPassword ? "error" : "default"}
+  disabled={loading}
+  className={shakeConfirmPassword ? "animate-shake" : ""}
+/>
+
 
         {error && (
           <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-lg flex items-center gap-2">
