@@ -1,0 +1,56 @@
+/* app/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Animação de shake */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.animate-shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+/* Gradiente de texto */
+.gradient-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, var(--tw-gradient-from), var(--tw-gradient-to));
+}
+
+/* Definir variáveis CSS para as cores do gradiente (Tailwind CSS custom properties) */
+:root {
+  --primary-purple: #4F46E5;
+  --secondary-purple: #7C3AED;
+}
+
+/* Classes Tailwind para as cores */
+.from-primary-purple {
+  --tw-gradient-from: var(--primary-purple) var(--tw-gradient-from-position);
+}
+
+.to-primary-purple {
+  --tw-gradient-to: var(--primary-purple) var(--tw-gradient-to-position);
+}
+
+.from-secondary-purple {
+  --tw-gradient-from: var(--secondary-purple) var(--tw-gradient-from-position);
+}
+
+.to-secondary-purple {
+  --tw-gradient-to: var(--secondary-purple) var(--tw-gradient-to-position);
+}
+
+/* Animação de fade-in (opcional, para um toque extra) */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
