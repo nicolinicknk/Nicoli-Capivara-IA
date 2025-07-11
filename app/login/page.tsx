@@ -48,7 +48,7 @@ const Login = () => {
       );
 
       if (isValid) {
-        login("dummy-token", loginData.username); // Armazena também o nome
+        login("dummy-token", loginData.username); // Armazena o nome
         push("/dashboard");
       } else {
         setIsCredentialsInvalid(true);
