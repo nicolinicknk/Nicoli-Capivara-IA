@@ -1,4 +1,3 @@
-// app/forgot-password/page.tsx
 "use client";
 import { useState } from "react";
 import { Input, SubmitButton } from "@/components";
@@ -18,6 +17,8 @@ const ForgotPassword = () => {
       setError("Digite um email válido.");
       return;
     }
+
+    // Simulação de envio 
     setSubmitted(true);
   };
 
@@ -27,7 +28,7 @@ const ForgotPassword = () => {
         onSubmit={handleSubmit}
         className="bg-white dark:bg-gray-800 shadow-lg rounded-xl p-8 w-full max-w-md animate-fade-in space-y-6"
       >
-        <h1 className="text-center font-bold text-[28px] md:text-[32px] hover:scale-[1.03] transition-all duration-500 cursor-default">
+        <h1 className="text-center font-bold text-[28px] md:text-[32px] hover:scale-[1.03] transition-all duration-500 cursor-default text-black dark:text-white">
           Recuperar acesso na{" "}
           <span className="gradient-text from-secondary-purple to-primary-purple">
             Capivara AI
@@ -36,7 +37,10 @@ const ForgotPassword = () => {
 
         {!submitted ? (
           <>
-            <label className="block text-base font-medium mb-2" htmlFor="email">
+            <label
+              className="block text-base font-medium mb-2 text-black dark:text-white"
+              htmlFor="email"
+            >
               Email
             </label>
             <Input
